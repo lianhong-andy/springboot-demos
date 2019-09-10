@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot-demo-helloworld</module>
+        <module>springboot-demo-properties</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
