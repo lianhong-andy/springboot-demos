@@ -7,13 +7,8 @@
         <module>springboot-demo-helloworld</module>
         <module>springboot-demo-properties</module>
         <module>springboot-demo-actuator</module>
+        <module>springboot-demo-admin-client</module>
     </modules>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.8.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -26,7 +21,7 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.1.0.RELEASE</spring.boot.version>
+        <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
         <mysql.version>8.0.12</mysql.version>
         <hutool.version>4.5.1</hutool.version>
         <guava.version>27.0.1-jre</guava.version>
