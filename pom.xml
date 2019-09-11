@@ -8,6 +8,7 @@
         <module>springboot-demo-properties</module>
         <module>springboot-demo-actuator</module>
         <module>springboot-demo-admin-client</module>
+        <module>springboot-demo-admin-server</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>

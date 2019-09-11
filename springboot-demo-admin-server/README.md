@@ -1,6 +1,6 @@
-# springboot-demo-admin-client
+# spring-boot-demo-admin-server
 
-> 本demo 主要演示了普通项目如何集成Spring Boot Admin，并且把自己的运行状态交给Spring Boot Admin进行展现
+> 本 demo 主要演示了如何搭建一个 Spring Boot Admin 的服务端项目，可视化展示自己客户端项目的运行状态。
 
 ## pom.xml
 ```xml
@@ -15,17 +15,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-demo-admin-server</artifactId>
+    <artifactId>springboot-demo-admin-client</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>springboot-demo-admin-server</name>
+
+    <name>springboot-demo-admin-client</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-boot-admin.version>2.1.0</spring-boot-admin.version>
+        <spring-boot-admin.version>2.0.3</spring-boot-admin.version>
     </properties>
 
     <dependencies>
@@ -36,7 +37,12 @@
 
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <dependency>
@@ -59,7 +65,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>spring-boot-demo-admin-server</finalName>
+        <finalName>spring-boot-demo-admin-client</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -69,41 +75,43 @@
     </build>
 
 
-
 </project>
 ```
 
 ## application.yml
 ```yaml
 server:
-  port: 8100
+  port: 8084
+  servlet:
+    context-path: /demo
 spring:
+  application:
+    # Spring Boot Admin展示的客户端项目名，不设置，会使用自动生成的随机id
+    name: springboot-demo-admin-client
   boot:
     admin:
-      # 管控台上下文路径
-      context-path: /admin
+      client:
+        # Spring Boot Admin 服务端地址
+        url: "http://localhost:8100/admin"
+        instance:
+          metadata:
+            # 客户端端点信息的安全认证信息
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+  security:
+    user:
+      name: lianhong
+      password: 123456
+management:
+  endpoint:
+    health:
+      # 端点健康情况，默认值"never"，设置为"always"可以显示硬盘使用情况和线程情况
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        # 设置端点暴露的哪些内容，默认["health","info"]，设置"*"代表暴露所有可访问的端点
+        include: "*"
 ```
 
-## SpringBootDemoAdminServer
-```java
-package com.andy.admin.server;
-
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-/**
- * @author lianhong
- * @description
- * @date 2019/9/11 0011下午 8:26
- */
-@EnableAdminServer
-@SpringBootApplication
-public class SpringBootDemoAdminServer {
-    public static void main(String[] args) {
-        SpringApplication.run(SpringBootDemoAdminServer.class,args);
-    }
-}
-
-```
 

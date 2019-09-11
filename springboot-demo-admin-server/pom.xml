@@ -1,9 +1,3 @@
-# springboot-demo-admin-client
-
-> 本demo 主要演示了普通项目如何集成Spring Boot Admin，并且把自己的运行状态交给Spring Boot Admin进行展现
-
-## pom.xml
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -71,39 +65,3 @@
 
 
 </project>
-```
-
-## application.yml
-```yaml
-server:
-  port: 8100
-spring:
-  boot:
-    admin:
-      # 管控台上下文路径
-      context-path: /admin
-```
-
-## SpringBootDemoAdminServer
-```java
-package com.andy.admin.server;
-
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-/**
- * @author lianhong
- * @description
- * @date 2019/9/11 0011下午 8:26
- */
-@EnableAdminServer
-@SpringBootApplication
-public class SpringBootDemoAdminServer {
-    public static void main(String[] args) {
-        SpringApplication.run(SpringBootDemoAdminServer.class,args);
-    }
-}
-
-```
-
