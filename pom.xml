@@ -6,6 +6,7 @@
     <modules>
         <module>springboot-demo-helloworld</module>
         <module>springboot-demo-properties</module>
+        <module>springboot-demo-actuator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
