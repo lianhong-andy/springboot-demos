@@ -114,4 +114,5 @@ management:
         include: "*"
 ```
 
-
+## springboot admin server的用法
+https://www.cnblogs.com/okong/p/springboot-twenty-eight.html
