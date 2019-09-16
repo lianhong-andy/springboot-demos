@@ -10,6 +10,7 @@
         <module>springboot-demo-admin-client</module>
         <module>springboot-demo-admin-server</module>
         <module>springboot-demo-logback</module>
+        <module>springboot-demo-log-aop</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
