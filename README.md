@@ -1,5 +1,6 @@
 # Spring Boot Demo
 
+> 原仓库地址：https://github.com/xkcoding/spring-boot-demo
 
 ### 分支
 - master 分支：基于SpringBoot版本 2.1.0.RELEASE，每个 module 的 parent 依赖根目录下的pom.xml，主要用于管理每个module的依赖版本，方便大家学习
