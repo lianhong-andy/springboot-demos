@@ -1,0 +1,11 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /demo
+spring:
+  thymeleaf:
+    servlet:
+      content-type: text/html
+    mode: HTML
+    cache: false
+    encoding: UTF-8

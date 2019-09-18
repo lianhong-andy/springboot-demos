@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{common/head :: header}"></header>
+<body>
+<div id="app" style="margin: 20px 20%">
+    <form action="/demo/user/login" method="post">
+        <span id="username">username</span><input type="text" name="name" placeholder="username"><br/>
+        <span id="password">password</span><input type="password" name="password" placeholder="password"><br/>
+        <input type="submit" value="登录">
+    </form>
+</div>
+
+</body>
+</html>

@@ -13,6 +13,7 @@
         <module>springboot-demo-log-aop</module>
         <module>springboot-demo-exception-handler</module>
         <module>springboot-demo-template-freemarker</module>
+        <module>springboot-demo-template-thymeleaf</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
