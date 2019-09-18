@@ -15,6 +15,7 @@
         <module>springboot-demo-template-freemarker</module>
         <module>springboot-demo-template-thymeleaf</module>
         <module>springboot-demo-template-beetl</module>
+        <module>springboot-demo-template-enjoy</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
