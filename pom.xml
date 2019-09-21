@@ -16,6 +16,7 @@
         <module>springboot-demo-template-thymeleaf</module>
         <module>springboot-demo-template-beetl</module>
         <module>springboot-demo-template-enjoy</module>
+        <module>springboot-demo-orm-jdbctemplate</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
