@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
@@ -31,22 +32,25 @@ public class GenericClassTest {
     }
 
     @Test
+    @Ignore
     public void testGenericClean() {
         /**
          * 泛型的主要好处就是让编译器保留参数的类型信息，执行类型检查，执行类型转换（casting）操作，
          * 编译器保证了这些类型转换（casting）的绝对无误。
          */
+
         //演示泛型擦除
-        /******* 使用泛型类型 *******/
+        //******* 使用泛型类型 *******//*
         List<String> list2 = new ArrayList<String>();
         list2.add("value");                 //[类型安全的写入数据] 编译器检查该值,该值必须是String类型才能通过编译
         String str2 = list2.get(0); //[类型安全的读取数据] 不需要手动转换
         System.out.println("str2 = " + str2);
 
-        /******* 不使用泛型类型 *******/
+        //******* 不使用泛型类型 *******//*
         List list = new ArrayList<>();
         list.add("andy"); //编译器不检查值
         Integer e = (Integer) list.get(0);//需手动强制转换,如转换类型与原数据类型不一致将抛出ClassCastException异常
+
     }
 
     @Test
