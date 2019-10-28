@@ -17,6 +17,8 @@
         <module>springboot-demo-template-beetl</module>
         <module>springboot-demo-template-enjoy</module>
         <module>springboot-demo-orm-jdbctemplate</module>
+        <module>springboot-demo-orm-jpa</module>
+        <module>springboot-demo-orm-mybatis</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
