@@ -19,6 +19,7 @@
         <module>springboot-demo-orm-jdbctemplate</module>
         <module>springboot-demo-orm-jpa</module>
         <module>springboot-demo-orm-mybatis</module>
+        <module>springboot-demo-orm-mybatis-mapper-page</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
