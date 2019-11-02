@@ -139,7 +139,7 @@ public class UserMapperTest extends SpringBootDemoOrmMybatisPlusApplicationTest 
     /**
      * 初始化数据
      */
-    @Before
+//    @Before
     public void init() {
         testBatchInsert();
     }

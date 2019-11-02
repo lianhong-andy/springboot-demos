@@ -21,6 +21,7 @@
         <module>springboot-demo-orm-mybatis</module>
         <module>springboot-demo-orm-mybatis-mapper-page</module>
         <module>springboot-demo-orm-mybatis-plus</module>
+        <module>springboot-demo-orm-beetsql</module>
     </modules>
     <groupId>com.andy</groupId>
     <artifactId>spring-boot-demo</artifactId>
